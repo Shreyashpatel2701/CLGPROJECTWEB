@@ -1,0 +1,119 @@
+<html>
+<head>
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="regform">
+            <h1>Self Reporting Form</h1>
+        </div>
+        <div class="main">
+		<form action="" method="post">
+			
+
+                <div id="name">
+                    <h2 class="name">Name</h2>
+                    <input class="firstname" type="text" id="first_nm" name="first_name" placeholder="First Name">
+                    <!--<label class="firstlabel">first name</label>-->
+                    <input class="lastname" type="text" id="last_nm" name="last_name" placeholder="Last Name"><br>
+                    <!--<label class="lastlabel">last name</label>-->
+                </div>
+                <h2 class="name">Mobile Number</h2>
+                <input class="code" type="tel" name="code" id="area_co" placeholder="Area code">
+                <!--<label class="area-code">Area Code</label>-->
+                <input class="mob_no" type="tel" id="mob" name="mob_no" placeholder="Mobile Number" pattern="[0-9]{10}" onblur="check_doc()"><br>
+                <!--<label class="mobile-number">mobile number</label>-->
+                <h2 class="name">Email</h2>
+                <input class="email" type="text"  id="email" name="email" placeholder="Email"><br>
+
+                <h2 class="name">Address</h2>
+                <input class="address" type="text" id="address" name="address" placeholder="House no. , street/village"><br>
+
+                <h2 class="name">City</h2>
+                <input class="city " type="text" id="city_nm" name="city" placeholder="city"><br>
+
+                <h2 class="name">State</h2>
+                <input class="state" type="text" id="state_nm" name="state" placeholder="state"><br>
+
+                <h2 class="name">Whom to meet</h2>
+                <select class="option" name="meet" id="person_list">
+                    <option disabled="disabled" selected="selected">--Choose Option--</option>
+                    <option id="opt">Mr. Subhash Tatle</option>
+                    <option id="opt">Mr. Atul Kulkarni</option>
+                </select>
+				
+				
+				<h2  class="name">Purpose Of the Visit :</h2><INPUT class="purpose_of_meet" type="text" id="purposeMeet" name="purpose_of_meet" placeholder="purpose_of_meet">
+                <h2 class="name">Any symptoms -</h2>
+
+                <h3 id="fever">Fever :</h3>
+                <label class="radio">
+                    <input class="radio-one" type="radio" value="Yes" id="fev" name="fever">
+                    <span class="checkmark"></span>
+                    Yes
+                </label>
+                <label class="radio">
+                    <input class="radio-two" type="radio" value="No" id="fev" name="fever">
+                    <span class="checkmark"></span>
+                    No
+                </label>
+                
+
+                <h3 id="fever">Cough :</h3>
+                <label class="radio">
+                    <input class="radio-one" type="radio"  value="Yes" id="cough" name="cough">
+                    <span class="checkmark"></span>
+                    Yes
+                </label>
+                <label class="radio">
+                    <input class="radio-two" type="radio" value="No" id="cough" name="cough">
+                    <span class="checkmark"></span>
+                    No
+                </label>
+                
+
+                <h3 id="fever">Breathing difficulty :</h3>
+                <label class="radio">
+                    <input class="radio-one" type="radio"  value="Yes" id="breath" name="radio3">
+                    <span class="checkmark"></span>
+                    Yes
+                </label>
+                <label class="radio">
+                    <input class="radio-two" type="radio"  value="No" id="breath" name="radio3">
+                    <span class="checkmark"></span>
+                    No
+                </label>
+
+                <h3 id="fever">Respiratory disease :</h3>
+                <label class="radio">
+                    <input class="radio-one" type="radio" value="Yes" id="res" name="radio4">
+                    <span class="checkmark"></span>
+                    Yes
+                </label>
+                <label class="radio">
+                    <input class="radio-two" type="radio" value="No" id="res" name="radio4">
+                    <span class="checkmark"></span>
+                    No
+                </label><BR><BR>
+				
+				<h3>Time Of Meet : </h3><INPUT id="txt_tm" type="time"/><BR><BR>
+				<h3>Date Of Meet : </h3><INPUT id="txt_dt" type="date"/><BR><BR>
+
+                <button type="submit" id="btn_sub" onclick="insert_data()">Submit</button>
+
+        </form>
+        </div>
+  
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+	
+	<script src="NewScript.js">
+	</script>
+</body>
+
+
+
+</html>
